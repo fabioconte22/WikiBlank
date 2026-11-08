@@ -1,0 +1,16 @@
+name: wikiblank
+services:
+  db: 
+    image: postgres:16-alpine
+    container_name: wikiblank-db
+    environment:
+      POSTGRES_DB: wikiblank
+      POSTGRES_USER: wikiblank
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-secret}
+    ports:
+      - "5433:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:

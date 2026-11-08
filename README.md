@@ -1,2 +1,1 @@
-WikiBlank 
-University project within the Web Technologies course
+WikiBlank - University project within the Web Technologies course
