@@ -1,2 +1,2 @@
 WikiBlank 
-Universitary project within the Web Tecnologies couse
+University project within the Web Technologies course
