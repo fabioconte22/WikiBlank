@@ -1,0 +1,9 @@
+# File generati dal sistema operativo 
+.DS_Store
+
+# Ambiente di sviluppo (IDE e editor)
+.idea/
+.vscode/
+
+# Password e segreti 
+.env
