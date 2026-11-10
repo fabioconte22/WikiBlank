@@ -9,21 +9,63 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class TokenTest {
      
     @Test
-    void muskedTokenWithoutTextIsAccepted() {
-       Token token = new Token(6, null, TokenType.MASKED_WORD);
+    void maskedTokenWithoutTextIsAccepted() {
+       Token token = new Token(6, null, TokenType.MASKED);
 
        assertEquals(6, token.length());
        assertNull(token.text());
-       assertEquals(TokenType.MASKED_WORD, token.type());
+       assertEquals(TokenType.MASKED, token.type());
        
     }
 
     @Test 
-    void muskedTokenWhitTextIsRejected() {
+    void maskedTokenWhithTextIsRejected() {
 
         assertThrows(IllegalArgumentException.class, 
-            () -> new Token(5, "Lionel", TokenType.MASKED_WORD));
+            () -> new Token(5, "Lionel", TokenType.MASKED)
+        );
 
+    }
+
+    @Test 
+    void maskedTokenWhithoutLengthRejected() {
+
+        assertThrows(IllegalArgumentException.class,
+            () -> new Token(0, null, TokenType.MASKED)
+        );
+    }
+
+    @Test 
+    void visibleTokenWhithoutTextRejected() {
+
+        assertThrows(IllegalArgumentException.class,
+            () -> new Token(4, null, TokenType.VISIBLE)
+        );
+    }
+
+    @Test 
+    void visibleTokenBlankTextRejected() {
+
+        assertThrows(IllegalArgumentException.class, 
+            () -> new Token(0, "", TokenType.VISIBLE)
+        );
+    }
+
+    @Test 
+    void separatorTokenWhithSpaceAccepted() {
+        Token token = new Token(1, " ", TokenType.SEPARATOR); 
+
+        assertEquals(1, token.length());
+        assertEquals(" ", token.text());
+        assertEquals(TokenType.SEPARATOR, token.type());
+    }
+
+    @Test 
+    void tokenTypeNullRejected() {
+
+        assertThrows(IllegalArgumentException.class, 
+            () -> new Token(8, "Pippo", null)
+        ); 
     }
 
 }

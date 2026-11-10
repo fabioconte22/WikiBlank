@@ -6,14 +6,14 @@ public record Token(int length, String text, TokenType type) {
             throw new IllegalArgumentException("type is required"); 
         
         switch(type) {
-            case MASKED_WORD -> {
+            case MASKED -> {
                 if (length <= 0)
                     throw new IllegalArgumentException("a masked token must have a positive length ");
 
                 if (text != null)
                     throw new IllegalArgumentException("a masked token must not have text");
             }
-            case VISIBLE_WORD -> {
+            case VISIBLE -> {
                 if (text == null || text.isBlank())
                     throw new IllegalArgumentException("a visible token must not be null or blank ");
 
