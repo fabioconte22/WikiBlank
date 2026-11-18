@@ -1,4 +1,4 @@
-package com.wikiblank.dto;
+package com.wikiblank.game.dto;
 
 public record Token(int length, String text, TokenType type) {
     public Token {

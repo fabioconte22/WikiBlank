@@ -1,13 +1,11 @@
-package com.wikiblank.service;
+package com.wikiblank.game.service;
 
 import java.util.Set;
 import java.util.List;
-import com.wikiblank.dto.Token;
-import com.wikiblank.dto.TokenType;
+import com.wikiblank.game.dto.Token;
+import com.wikiblank.game.dto.TokenType;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class TextMaskingServiceTest {
     
