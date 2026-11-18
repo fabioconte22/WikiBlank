@@ -1,4 +1,4 @@
-package com.wikiblank.service;
+package com.wikiblank.game.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;

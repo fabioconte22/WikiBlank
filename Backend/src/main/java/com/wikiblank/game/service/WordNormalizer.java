@@ -1,4 +1,4 @@
-package com.wikiblank.service;
+package com.wikiblank.game.service;
 
 import java.util.Locale;
 import java.util.Objects;

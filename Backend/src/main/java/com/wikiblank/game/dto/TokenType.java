@@ -1,4 +1,4 @@
-package com.wikiblank.dto;
+package com.wikiblank.game.dto;
 
 public enum TokenType {
     MASKED, 
